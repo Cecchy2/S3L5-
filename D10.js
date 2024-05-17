@@ -188,9 +188,9 @@ const rollTheDices = function (numero) {
     values: [],
   };
   for (let i = 0; i < numero; i++) {
-    const NumeriDado = dice();
-    diceResult.sum += NumeriDado;
-    diceResult.values.push(NumeriDado);
+    const NumeroDado = dice();
+    diceResult.sum = diceResult.sum + NumeroDado;
+    diceResult.values.push(NumeroDado);
   }
   return diceResult;
 };
