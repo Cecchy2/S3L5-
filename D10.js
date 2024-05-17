@@ -95,16 +95,34 @@ const whoIsBigger = function (num1, num2) {
 };
 
 whoIsBigger(2938376, 3837327287);
+
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+const splitMe = function (stringa) {
+  const splittedString = stringa.split(" ");
+  return splittedString;
+};
+
+console.log(splitMe("ciao a tutti sono Dario"));
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+const deleteOne = function (string, bool) {
+  if (bool === true) {
+    return string.substring(1);
+  } else {
+    return string.substring(0, string.length - 1);
+  }
+};
+console.log(deleteOne("Toglimi un pezzo", true));
+console.log(deleteOne("Toglimi un pezzo", false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -112,13 +130,44 @@ whoIsBigger(2938376, 3837327287);
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+const onlyLetters = function (stringa) {};
+
+onlyLetters("44 gatti");
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+/* const isThisAnEmail = function (stringa) {
+  if (stringa.isvalidemail() === true) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(isThisAnEmail("dario@epicode.com")); */ //leggere bene email regex stackoverflow
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+const whatDayIsIt = function () {
+  const now = new Date();
+  console.log(now);
+  const weekDay = [
+    "lunedì",
+    "martedì",
+    "mercoledì",
+    "giovedì",
+    "venerdì",
+    "sabato",
+    "domenica",
+  ];
+  const dayOfWeek = now.getDay();
+  console.log(dayOfWeek);
+
+  return weekDay[dayOfWeek - 1];
+};
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
