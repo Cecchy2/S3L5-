@@ -81,7 +81,6 @@ const dice = function () {
   return randomNum;
 };
 console.log(dice());
-dice();
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -89,7 +88,7 @@ dice();
 
 const whoIsBigger = function (num1, num2) {
   if (num1 > num2) {
-    console.log("il maggiore è " + num2);
+    console.log("il maggiore è " + num1);
   } else {
     console.log("il maggiore è " + num2);
   }
