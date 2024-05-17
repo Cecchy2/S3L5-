@@ -401,13 +401,27 @@ redBackground();
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const liElementAdd = function () {
+  const myListElement = document.getElementById("myList");
+  const liElement = document.createElement("li");
+  liElement.innerText = "Ciao";
+  myListElement.appendChild(liElement);
+};
+
+/* liElementAdd(); */
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+const myListElement = document.getElementById("myList");
+myListElement.removechildren(liElement);
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+const trTags = document.querySelectorAll("tr");
 
 // [EXTRA] JS Avanzato
 
