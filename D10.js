@@ -414,15 +414,19 @@ const liElementAdd = function () {
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-const myListElement = document.getElementById("myList");
-myListElement.removechildren(liElement);
+/* const myListElement = document.getElementById("myList"); //-------non funziona
+myListElement.removechildren(); */
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+const addClassTr = function () {
+  const trTags = document.querySelectorAll("tr");
 
-const trTags = document.querySelectorAll("tr");
-
+  trTags.forEach(function (tr) {
+    tr.classList.add("test");
+  });
+};
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
