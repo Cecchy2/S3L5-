@@ -34,7 +34,7 @@ console.log(random);
 
 const me = {
   name: "Dario",
-  surname: "cecchinato",
+  surname: "Cecchinato",
   eta: 43,
 };
 
@@ -81,6 +81,7 @@ const dice = function () {
   return randomNum;
 };
 console.log(dice());
+dice();
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
