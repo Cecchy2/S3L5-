@@ -252,6 +252,21 @@ console.log(deleteProp({ nome: "dario", anni: 33, cognome: "cecchinato" }, "nome
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
+const newestMovie = function (movies) {
+  let newest = movies[0];
+
+  for (let i = 0; i < movies.length; i++) {
+    const currentFilm = movies[i];
+
+    if (currentFilm.Year > newest.Year) {
+      newest = currentFilm;
+    }
+  }
+  return newest;
+};
+//console.log(newestMovie(movies));
+//----------Il consoleLog è stato eseguito alla fine dell'Array perchè per 1 ora ho provato ad eseguirlo quì: mi tornava il messaggio di errore: Cannot access 'movies' before initialization
+
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
@@ -458,3 +473,5 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
+
+console.log(newestMovie(movies));
